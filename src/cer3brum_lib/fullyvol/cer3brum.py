@@ -528,8 +528,9 @@ def ThreeLevelsStrConv(input_dims,
     
         
     # compile the actual model
-    #model.compile(loss = loss_function, optimizer = my_adam, metrics=['categorical_crossentropy'])
+    model.compile(loss = loss_function, optimizer = my_adam, metrics=['categorical_crossentropy'])
     
+    """
     model.compile(loss      = losses_dict[loss_function],
                   optimizer = my_adam,
                   metrics   = ['categorical_crossentropy',
@@ -537,7 +538,7 @@ def ThreeLevelsStrConv(input_dims,
                                losses_dict['average_multiclass_dice_coeff'],
                                #losses_dict['weighted_multiclass_dice_coeff'],
                                losses_dict['tanimoto_coefficient'] ])
-    
+    """
     # print a summary of the model
     model.summary()
     
